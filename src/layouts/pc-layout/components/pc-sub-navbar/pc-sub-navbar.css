@@ -1,0 +1,25 @@
+.more-content {
+    transition: 0.1s;
+}
+
+.more-content:hover {
+    transition: 0.1s;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.more-content:hover .more-content-arrorw {
+    cursor: pointer;
+    transition: 0.3s;
+    transform: translateX(5px);
+}
+
+.more-content-arrorw:hover {
+    cursor: pointer;
+    transition: 0.3s;
+    transform: translateX(5px);
+}
+
+.more-content-arrorw {
+    transition: 0.3s;
+}
