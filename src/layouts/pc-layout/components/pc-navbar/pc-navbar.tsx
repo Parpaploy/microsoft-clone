@@ -1,5 +1,5 @@
-import { ImagePath } from "../../../constants/image-path";
-import { leftNavbarMenu } from "../../../constants/web-content";
+import { ImagePath } from "../../../../constants/image-path";
+import { leftNavbarMenu } from "../../../../constants/web-content";
 import { PiShoppingCartLight } from "react-icons/pi";
 import { VscSearch } from "react-icons/vsc";
 import { IoIosArrowDown } from "react-icons/io";
@@ -10,10 +10,13 @@ export default function PcNavbar() {
     <>
       <div
         style={{ padding: `0 3vw` }}
-        className="w-[100%] h-[7svh] bg-gray-300 flex justify-between items-center text-[0.9vw] font-light"
+        className="w-[100%] h-[7svh] bg-white flex justify-between items-center text-[0.9vw] font-light"
       >
         <div className="w-auto h-full flex items-center">
-          <div className="w-auto h-[45%] py-[2vw]">
+          <div
+            style={{ paddingBottom: `0.6svh` }}
+            className="w-auto h-[50%] pc-nav-menu"
+          >
             <img src={ImagePath.logo} className="w-full h-full" />
           </div>
           {leftNavbarMenu.map((menu: string, index: number) => (
@@ -34,7 +37,9 @@ export default function PcNavbar() {
             style={{ marginRight: `1.3vw` }}
             className="flex h-full w-auto items-center gap-[5px] pc-nav-menu"
           >
-            <div className="flex items-center span-outline">All Microsoft</div>
+            <div className="flex items-center span-outline pc-nav-menu">
+              All Microsoft
+            </div>
             <div className="arrow-down-icon text-[1.2vw] text-gray-500">
               <IoIosArrowDown />
             </div>
@@ -44,8 +49,10 @@ export default function PcNavbar() {
             style={{ marginRight: `1.3vw` }}
             className="flex h-full w-auto items-center gap-[5px] pc-nav-menu"
           >
-            <div className="flex items-center span-outline">Search</div>
-            <div className="search-icon text-[1.2vw]">
+            <div className="flex items-center span-outline pc-nav-menu">
+              Search
+            </div>
+            <div className="search-icon text-[1.1vw]">
               <VscSearch />
             </div>
           </div>
@@ -55,12 +62,12 @@ export default function PcNavbar() {
             className="flex h-full w-auto items-center gap-[5px] pc-nav-menu"
           >
             <div className="flex items-center span-outline">Cart</div>
-            <div className="cart-icon text-[1.3vw]">
+            <div className="cart-icon text-[1.3vw] pc-nav-menu">
               <PiShoppingCartLight />
             </div>
           </div>
 
-          <div className="flex h-full w-auto items-center gap-[15px] sign-in">
+          <div className="flex h-full w-auto items-center gap-[12px] sign-in">
             <div className="flex items-center">Sign in</div>
             <div className="sign-in-img w-auto h-[60%]">
               <img

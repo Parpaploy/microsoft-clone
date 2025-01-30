@@ -1,0 +1,28 @@
+.span-outline {
+    transition: 0.1s;
+    box-shadow: 0 2px 0 transparent;
+}
+
+.pc-nav-menu:hover .span-outline {
+    box-shadow: 0 2px 0 black;
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+.pc-nav-menu:hover {
+    cursor: pointer;
+}
+
+.more-content {
+    transition: 0.1s;
+}
+
+.more-content:hover {
+    transition: 0.1s;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.sign-in:hover {
+    cursor: pointer;
+}
