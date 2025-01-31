@@ -1,0 +1,17 @@
+.pc-top {
+    background-image: url("https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Grid-Container-Gradient-Surface-Family-COMMR-Top?scl=1");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.black-btn:hover {
+    cursor: pointer;
+}
+
+.pc-bottom {
+    background-image: url("https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Grid-Container-Gradient-Surface-Family-COMMR-Bottom?scl=1");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
