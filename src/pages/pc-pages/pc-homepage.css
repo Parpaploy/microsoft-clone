@@ -15,3 +15,16 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.pc-card-btn:hover {
+    background-color: #0059a2;
+    cursor: pointer;
+}
+
+.console-shop {
+    background-image: url("https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Xbox-Controller-Valentine-Hero-2120x1190:VP2-859x540");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #F2F2F2;
+}

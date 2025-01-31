@@ -1,7 +1,16 @@
-import { PcCardContent } from "../../constants/web-content";
-import PcContentCard, {
-  IPcContentCardProps,
-} from "./components/pc-content-card";
+import {
+  PcCardContentBottom,
+  PcCardContentExplore,
+  PcCardContentForBusiness,
+  PcCardContentTop,
+  PcCategoryMenuContent,
+} from "../../constants/web-content";
+import { IPcContentCardProps } from "../../interfaces/card.interface";
+import PcCategoryMenu, {
+  IPcCategoryMenuProps,
+} from "./components/pc-category-menu";
+import PcContentCardBig from "./components/pc-content-card-big";
+import PcContentCardSmall from "./components/pc-content-card-small";
 import "./pc-homepage.css";
 
 export default function PcHomePage() {
@@ -48,12 +57,12 @@ export default function PcHomePage() {
         </div>
 
         <div
-          style={{ padding: `0.7% 5% 0.9%` }}
-          className="w-full h-[73svh] pc-bottom flex items-center justify-center gap-[2vw]"
+          style={{ padding: `1% 5% 3%` }}
+          className="w-full h-auto flex items-center justify-center gap-[2vw] pc-bottom"
         >
-          {PcCardContent.map((value: IPcContentCardProps, index: number) => {
+          {PcCardContentTop.map((value: IPcContentCardProps, index: number) => {
             return (
-              <PcContentCard
+              <PcContentCardBig
                 key={index}
                 image={value.image}
                 title={value.title}
@@ -64,8 +73,118 @@ export default function PcHomePage() {
           })}
         </div>
 
-        <div className="w-full h-[60svh]">
-          <div></div>
+        <div
+          style={{ padding: `4% 3%`, marginTop: `2%`, marginBottom: `3%` }}
+          className="w-full h-auto flex flex-wrap gap-x-15 gap-y-5 items-center justify-center"
+        >
+          {PcCategoryMenuContent.map(
+            (value: IPcCategoryMenuProps, index: number) => {
+              return (
+                <PcCategoryMenu
+                  key={index}
+                  menuIcon={value.menuIcon}
+                  menuName={value.menuName}
+                />
+              );
+            }
+          )}
+        </div>
+
+        <div
+          style={{ padding: `0 5% 3%` }}
+          className="w-full h-auto flex items-center justify-center gap-[2vw]"
+        >
+          {PcCardContentBottom.map(
+            (value: IPcContentCardProps, index: number) => {
+              return (
+                <PcContentCardSmall
+                  key={index}
+                  image={value.image}
+                  title={value.title}
+                  description={value.description}
+                  buttonName={value.buttonName}
+                />
+              );
+            }
+          )}
+        </div>
+
+        <div style={{ cursor: `pointer`, margin: `4% 5%`, marginBottom: `6%` }}>
+          <div
+            style={{ padding: `6svh` }}
+            className="w-full h-[65svh] console-shop"
+          >
+            <div className="w-[33.5%] h-full flex flex-col justify-center items-start gap-[4%]">
+              <h1 className="font-medium text-[30px] whitespace-nowrap">
+                Xbox controllers
+              </h1>
+              <p className="text-[16px]">
+                Elite, wireless, adaptive—find the controller that fits your
+                style of play
+              </p>
+
+              <button
+                style={{ padding: `8px 12px`, borderRadius: `2px` }}
+                className="w-fit text-white text-[1.2vw] font-medium bg-[#0167B8] pc-card-btn"
+              >
+                Shop now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h1
+            style={{ padding: `2% 5% 0.5%` }}
+            className="font-semibold text-[35px]"
+          >
+            For business
+          </h1>
+          <div
+            style={{ padding: `0 5% 3%` }}
+            className="w-full h-auto flex items-center justify-center gap-[2vw]"
+          >
+            {PcCardContentForBusiness.map(
+              (value: IPcContentCardProps, index: number) => {
+                return (
+                  <PcContentCardSmall
+                    key={index}
+                    image={value.image}
+                    title={value.title}
+                    description={value.description}
+                    buttonName={value.buttonName}
+                  />
+                );
+              }
+            )}
+          </div>
+        </div>
+
+        <div style={{ marginTop: `-3%` }}>
+          <h1
+            style={{ padding: `2% 5% 0%` }}
+            className="font-semibold text-[35px]"
+          >
+            Explore more about AI and Copilot
+          </h1>
+          <div
+            style={{ padding: `1% 5% 3%` }}
+            className="w-full h-auto flex items-center justify-center gap-[2vw]"
+          >
+            {PcCardContentExplore.map(
+              (value: IPcContentCardProps, index: number) => {
+                return (
+                  <PcContentCardBig
+                    key={index}
+                    image={value.image}
+                    title={value.title}
+                    description={value.description}
+                    buttonName={value.buttonName}
+                  />
+                );
+              }
+            )}
+          </div>
         </div>
       </div>
     </>

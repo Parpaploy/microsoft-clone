@@ -1,0 +1,12 @@
+.pc-card {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.pc-card:hover {
+    cursor: pointer;
+}
+
+.pc-card-btn:hover {
+    background-color: #0059a2;
+    cursor: pointer;
+}
