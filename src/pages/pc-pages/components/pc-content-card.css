@@ -8,4 +8,5 @@
 
 .pc-card-btn:hover {
     background-color: #0059a2;
+    cursor: pointer;
 }

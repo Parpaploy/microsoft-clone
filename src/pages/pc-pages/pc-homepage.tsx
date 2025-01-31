@@ -7,7 +7,7 @@ import "./pc-homepage.css";
 export default function PcHomePage() {
   return (
     <>
-      <div className="w-full min-h-[86svh] bg-black">
+      <div className="w-full min-h-[86svh] bg-white">
         <div
           style={{ padding: `6svh` }}
           className="w-full h-[40svh] flex flex-col gap-[3vh] items-center pc-top"
@@ -48,8 +48,8 @@ export default function PcHomePage() {
         </div>
 
         <div
-          style={{ padding: `0.7% 0.9% 5%` }}
-          className="w-full h-[72.5svh] pc-bottom flex items-center justify-center gap-[2vw]"
+          style={{ padding: `0.7% 5% 0.9%` }}
+          className="w-full h-[73svh] pc-bottom flex items-center justify-center gap-[2vw]"
         >
           {PcCardContent.map((value: IPcContentCardProps, index: number) => {
             return (
@@ -62,6 +62,10 @@ export default function PcHomePage() {
               />
             );
           })}
+        </div>
+
+        <div className="w-full h-[60svh]">
+          <div></div>
         </div>
       </div>
     </>
