@@ -1,4 +1,7 @@
-import { IPcContentCardProps } from "../interfaces/card.interface";
+import {
+  IEmblaCaroucelProps,
+  IPcContentCardProps,
+} from "../interfaces/card.interface";
 import { IPcCategoryMenuProps } from "../pages/pc-pages/components/pc-category-menu";
 
 export const leftNavbarMenu: string[] = [
@@ -167,5 +170,28 @@ export const PcCardContentExplore: IPcContentCardProps[] = [
     description:
       "The head of Microsoft's AI for Good Lab shares how AI can help organizations further their humanitarian missions.",
     buttonName: "Find out more",
+  },
+];
+
+export const caroucelImage: IEmblaCaroucelProps[] = [
+  {
+    isCard: false,
+    image:
+      "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-NFL-2025-Kayvon-Thibodeaux:VP2-859x540",
+    bgCol: "#060B37",
+    title: "A touchdown for technology",
+    description:
+      "Learn how Microsoft is teaming up with the NFL to help players sharpen their game and uplift their communities.",
+    btnName: "Find out more",
+  },
+  {
+    isCard: true,
+    image:
+      "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-Black-History-Month-Code-of-Us-2025:VP2-859x540",
+    bgCol: "#F8E1CE",
+    title: "Celebrating Black History Month",
+    description:
+      "Discover the unique stories of Black and African American employees who help make Microsoft a leader in tech.",
+    btnName: "Learn more",
   },
 ];
