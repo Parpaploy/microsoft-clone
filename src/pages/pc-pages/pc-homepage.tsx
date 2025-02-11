@@ -5,14 +5,18 @@ import {
   PcCardContentForBusiness,
   PcCardContentTop,
   PcCategoryMenuContent,
-} from "../../constants/web-content";
+} from "../../constants/web-content.tsx";
 import { IPcContentCardProps } from "../../interfaces/card.interface";
 import PcCategoryMenu, {
   IPcCategoryMenuProps,
 } from "./components/pc-category-menu";
 import PcContentCardBig from "./components/pc-content-card-big";
 import PcContentCardSmall from "./components/pc-content-card-small";
+import { LiaFacebookF } from "react-icons/lia";
+import { BsTwitterX } from "react-icons/bs";
+import { IoLogoLinkedin } from "react-icons/io5";
 import "./pc-homepage.css";
+import PcFooter from "../../layouts/pc-layout/components/pc-footer/pc-footer";
 
 export default function PcHomePage() {
   return (
@@ -188,10 +192,22 @@ export default function PcHomePage() {
           </div>
         </div>
 
-        <div style={{ marginBottom: `5%` }}>
+        <div style={{ marginBottom: `4%` }}>
           <EmblaCarousel />
         </div>
+
+        <div
+          style={{ marginLeft: `6%`, marginBottom: `8%` }}
+          className="flex gap-7 justify-start items-center"
+        >
+          <span>Follow Microsoft</span>
+          <LiaFacebookF size={22} />
+          <BsTwitterX size={22} />
+          <IoLogoLinkedin size={22} />
+        </div>
       </div>
+
+      <PcFooter />
     </>
   );
 }

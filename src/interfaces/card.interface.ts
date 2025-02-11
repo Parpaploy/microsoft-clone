@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface IPcContentCardProps {
   image: string;
   title: string;
@@ -12,4 +14,24 @@ export interface IEmblaCaroucelProps {
   title: string;
   description: string;
   btnName: string;
+}
+
+export interface IFooterLink {
+  title: string;
+  href: string;
+}
+
+export interface IFooterColumn {
+  title: string;
+  links: IFooterLink[];
+}
+
+export interface IFooterData {
+  columns: IFooterColumn[];
+}
+
+export interface IBottomFooterProps {
+  title: string;
+  link: string;
+  icon: ReactNode;
 }

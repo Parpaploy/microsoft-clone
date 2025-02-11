@@ -1,5 +1,5 @@
 import { ImagePath } from "../../../../constants/image-path";
-import { leftNavbarMenu } from "../../../../constants/web-content";
+import { leftNavbarMenu } from "../../../../constants/web-content.tsx";
 import { PiShoppingCartLight } from "react-icons/pi";
 import { VscSearch } from "react-icons/vsc";
 import { IoIosArrowDown } from "react-icons/io";

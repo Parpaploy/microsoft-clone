@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { IEmblaCaroucelProps } from "../interfaces/card.interface";
-import { caroucelImage } from "../constants/web-content";
+import { caroucelImage } from "../constants/web-content.tsx";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { HiPlay } from "react-icons/hi2";
 import { HiPause } from "react-icons/hi2";
@@ -30,10 +30,17 @@ export function EmblaCarousel() {
 
   useEffect(() => {
     if (!emblaApi) return;
-    const onSelect = () => setSelectedIndex(emblaApi.selectedScrollSnap());
+
+    const onSelect = () => {
+      setSelectedIndex(emblaApi.selectedScrollSnap());
+    };
+
     emblaApi.on("select", onSelect);
     onSelect();
-    return () => emblaApi.off("select", onSelect);
+
+    return () => {
+      emblaApi.off("select", onSelect);
+    };
   }, [emblaApi]);
 
   return (
@@ -121,13 +128,13 @@ export function EmblaCarousel() {
           className="text-black border-2 border-black bg-white transition-all hover:bg-black hover:text-white hover:cursor-pointer p-2 rounded-full flex items-center justify-center w-5 h-5"
         >
           {isPlaying ? (
-            <HiPlay
+            <HiPause
               size={14}
               className="text-black hover:text-white"
               stroke="none"
             />
           ) : (
-            <HiPause
+            <HiPlay
               size={14}
               className="text-black hover:text-white"
               stroke="none"

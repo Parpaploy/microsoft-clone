@@ -1,8 +1,11 @@
 import {
+  IBottomFooterProps,
   IEmblaCaroucelProps,
+  IFooterData,
   IPcContentCardProps,
 } from "../interfaces/card.interface";
 import { IPcCategoryMenuProps } from "../pages/pc-pages/components/pc-category-menu";
+import { IoEarth } from "react-icons/io5";
 
 export const leftNavbarMenu: string[] = [
   "Microsoft 365",
@@ -193,5 +196,172 @@ export const caroucelImage: IEmblaCaroucelProps[] = [
     description:
       "Discover the unique stories of Black and African American employees who help make Microsoft a leader in tech.",
     btnName: "Learn more",
+  },
+];
+
+export const footerData: IFooterData = {
+  columns: [
+    {
+      title: "What's new",
+      links: [
+        { title: "Surface Pro", href: "" },
+        { title: "Surface Laptop", href: "" },
+        { title: "Surface Laptop Studio 2", href: "" },
+        { title: "Surface Laptop Go 3", href: "" },
+        { title: "Microsoft Copilot", href: "" },
+        { title: "AI in Windows", href: "" },
+        { title: "Explore Microsoft products", href: "" },
+        { title: "Windows 11 apps", href: "" },
+      ],
+    },
+    {
+      title: "Microsoft Store",
+      links: [
+        { title: "Account profile", href: "" },
+        { title: "Download Center", href: "" },
+        { title: "Microsoft Store support", href: "" },
+        { title: "Returns", href: "" },
+        { title: "Order tracking", href: "" },
+        { title: "Certified Refurbished", href: "" },
+        { title: "Microsoft Store Promise", href: "" },
+        { title: "Flexible Payments", href: "" },
+      ],
+    },
+    {
+      title: "Education",
+      links: [
+        { title: "Microsoft in education", href: "" },
+        { title: "Devices for education", href: "" },
+        { title: "Microsoft Teams for Education", href: "" },
+        { title: "Microsoft 365 Education", href: "" },
+        { title: "How to buy for your school", href: "" },
+        { title: "Educator training and development", href: "" },
+        { title: "Deals for students and parents", href: "" },
+        { title: "Azure for students", href: "" },
+      ],
+    },
+    {
+      title: "Business",
+      links: [
+        { title: "Microsoft Cloud", href: "" },
+        { title: "Microsoft Security", href: "" },
+        { title: "Dynamics 365", href: "" },
+        { title: "Microsoft 365", href: "" },
+        { title: "Microsoft Power Platform", href: "" },
+        { title: "Microsoft Teams", href: "" },
+        { title: "Microsoft 365 Copilot", href: "" },
+        { title: "Small Business", href: "" },
+      ],
+    },
+    {
+      title: "Developer & IT",
+      links: [
+        { title: "Azure", href: "" },
+        { title: "Microsoft Developer", href: "" },
+        { title: "Documentation", href: "" },
+        { title: "Microsoft Learn", href: "" },
+        { title: "Microsoft Tech Community", href: "" },
+        { title: "Azure Marketplace", href: "" },
+        { title: "AppSource", href: "" },
+        { title: "Visual Studio", href: "" },
+      ],
+    },
+    {
+      title: "Company",
+      links: [
+        { title: "Careers", href: "" },
+        { title: "About Microsoft", href: "" },
+        { title: "Company news", href: "" },
+        { title: "Privacy at Microsoft", href: "" },
+        { title: "Investors", href: "" },
+        { title: "Diversity and inclusion", href: "" },
+        { title: "Accessibility", href: "" },
+        { title: "Sustainability", href: "" },
+      ],
+    },
+  ],
+};
+
+export const bottomFooterData: IBottomFooterProps[] = [
+  {
+    title: "English (United States)",
+    link: "",
+    icon: <IoEarth size={24} />,
+  },
+  {
+    title: "Your Privacy Choices",
+    link: "",
+    icon: (
+      <svg
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 30 14"
+        height="14"
+        width="43"
+      >
+        <title>Your Privacy Choices Opt-Out Icon</title>
+        <path
+          d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z"
+          style={{ fillRule: "evenodd", clipRule: "evenodd", fill: "#fff" }}
+        />
+        <path
+          d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z"
+          style={{ fillRule: "evenodd", clipRule: "evenodd", fill: "#06f" }}
+        />
+        <path
+          d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z"
+          style={{ fill: "#fff" }}
+        />
+        <path
+          d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z"
+          style={{ fill: "#06f" }}
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Customer Helth Privacy",
+    link: "",
+    icon: null,
+  },
+  {
+    title: "Sitemap",
+    link: "",
+    icon: null,
+  },
+  {
+    title: "Contact Microsoft",
+    link: "",
+    icon: null,
+  },
+  {
+    title: "Privacy",
+    link: "",
+    icon: null,
+  },
+  {
+    title: "Term of use",
+    link: "",
+    icon: null,
+  },
+  {
+    title: "Trademarks",
+    link: "",
+    icon: null,
+  },
+  {
+    title: "Safety & eco",
+    link: "",
+    icon: null,
+  },
+  {
+    title: "Recycling",
+    link: "",
+    icon: null,
+  },
+  {
+    title: "About our ads",
+    link: "",
+    icon: null,
   },
 ];
