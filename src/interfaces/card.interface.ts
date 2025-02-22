@@ -7,7 +7,7 @@ export interface IPcContentCardProps {
   buttonName: string;
 }
 
-export interface IEmblaCaroucelProps {
+export interface IPcEmblaCaroucelProps {
   isCard: boolean;
   image: string;
   bgCol: string;

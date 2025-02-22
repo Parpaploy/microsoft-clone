@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import { IEmblaCaroucelProps } from "../interfaces/card.interface";
-import { caroucelImage } from "../constants/web-content.tsx";
+import { IPcEmblaCaroucelProps } from "../../interfaces/card.interface.ts";
+import { pcCaroucelImage } from "../../constants/web-content.tsx";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { HiPlay } from "react-icons/hi2";
 import { HiPause } from "react-icons/hi2";
-import "./caroucel.css";
+import "./pc-caroucel.css";
 
-export function EmblaCarousel() {
+export function PcEmblaCarousel() {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
 
@@ -48,58 +48,28 @@ export function EmblaCarousel() {
       <div className="embla flex items-center justify-center">
         <div className="embla__viewport w-full" ref={emblaRef}>
           <div className="embla__container">
-            {caroucelImage.map((value: IEmblaCaroucelProps, index: number) => (
-              <div
-                key={index}
-                className="embla__slide w-full flex justify-start items-center relative"
-                style={{
-                  backgroundImage: `url(${value.image})`,
-                  backgroundPosition: "right",
-                  backgroundRepeat: "no-repeat",
-                  backgroundSize: "contain",
-                  backgroundColor: `${value.bgCol}`,
-                }}
-              >
-                {value.isCard === false ? (
-                  <div
-                    className="w-[37%] h-[full] flex flex-col justify-center items-start gap-[4%]"
-                    style={{ paddingLeft: `8.5%` }}
-                  >
-                    <h1 className="font-medium text-[40px] text-white">
-                      {value.title}
-                    </h1>
-                    <p className="text-[16px] text-white">
-                      {value.description}
-                    </p>
-                    <button
-                      style={{
-                        padding: `8px 12px`,
-                        borderRadius: `2px`,
-                        backgroundColor: "#0167B8",
-                        color: "white",
-                      }}
-                      className="text-[1.2vw] font-medium inPic-btn"
-                    >
-                      {value.btnName}
-                    </button>
-                  </div>
-                ) : (
-                  <div
-                    className="w-[37%] h-full flex justify-center items-center"
-                    style={{ paddingLeft: `5.5%` }}
-                  >
+            {pcCaroucelImage.map(
+              (value: IPcEmblaCaroucelProps, index: number) => (
+                <div
+                  key={index}
+                  className="embla__slide w-full flex justify-start items-center relative"
+                  style={{
+                    backgroundImage: `url(${value.image})`,
+                    backgroundPosition: "right",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "contain",
+                    backgroundColor: `${value.bgCol}`,
+                  }}
+                >
+                  {value.isCard === false ? (
                     <div
-                      className="bg-white w-full h-[80%] flex flex-col justify-center items-start gap-[4%]"
-                      style={{
-                        margin: `12% 0`,
-                        padding: `12%`,
-                        boxShadow: `rgba(0, 0, 0, 0.24) 0px 3px 8px`,
-                      }}
+                      className="w-[37%] h-[full] flex flex-col justify-center items-start gap-[4%]"
+                      style={{ paddingLeft: `8.5%` }}
                     >
-                      <h1 className="font-medium text-[40px] text-black">
+                      <h1 className="font-medium text-[40px] text-white">
                         {value.title}
                       </h1>
-                      <p className="text-[16px] text-black">
+                      <p className="text-[16px] text-white">
                         {value.description}
                       </p>
                       <button
@@ -114,10 +84,42 @@ export function EmblaCarousel() {
                         {value.btnName}
                       </button>
                     </div>
-                  </div>
-                )}
-              </div>
-            ))}
+                  ) : (
+                    <div
+                      className="w-[37%] h-full flex justify-center items-center"
+                      style={{ paddingLeft: `5.5%` }}
+                    >
+                      <div
+                        className="bg-white w-full h-[80%] flex flex-col justify-center items-start gap-[4%]"
+                        style={{
+                          margin: `12% 0`,
+                          padding: `12%`,
+                          boxShadow: `rgba(0, 0, 0, 0.24) 0px 3px 8px`,
+                        }}
+                      >
+                        <h1 className="font-medium text-[40px] text-black">
+                          {value.title}
+                        </h1>
+                        <p className="text-[16px] text-black">
+                          {value.description}
+                        </p>
+                        <button
+                          style={{
+                            padding: `8px 12px`,
+                            borderRadius: `2px`,
+                            backgroundColor: "#0167B8",
+                            color: "white",
+                          }}
+                          className="text-[1.2vw] font-medium inPic-btn"
+                        >
+                          {value.btnName}
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )
+            )}
           </div>
         </div>
       </div>
@@ -150,7 +152,7 @@ export function EmblaCarousel() {
         </button>
 
         <div className="flex space-x-1 gap-8">
-          {caroucelImage.map((_, index) => (
+          {pcCaroucelImage.map((_, index) => (
             <button
               key={index}
               className={`w-2.5 h-2.5 rounded-full transition-all ${

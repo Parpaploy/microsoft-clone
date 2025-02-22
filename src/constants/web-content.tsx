@@ -1,8 +1,8 @@
 import {
   IBottomFooterProps,
-  IEmblaCaroucelProps,
   IFooterData,
   IPcContentCardProps,
+  IPcEmblaCaroucelProps,
 } from "../interfaces/card.interface";
 import { IPcCategoryMenuProps } from "../pages/pc-pages/components/pc-category-menu";
 import { IoEarth } from "react-icons/io5";
@@ -176,7 +176,7 @@ export const PcCardContentExplore: IPcContentCardProps[] = [
   },
 ];
 
-export const caroucelImage: IEmblaCaroucelProps[] = [
+export const pcCaroucelImage: IPcEmblaCaroucelProps[] = [
   {
     isCard: false,
     image:
@@ -295,9 +295,10 @@ export const bottomFooterData: IBottomFooterProps[] = [
       <svg
         role="img"
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 30 14"
-        height="14"
-        width="43"
+        viewBox="-1 0 32 14"
+        height="8%"
+        width="9%"
+        preserveAspectRatio="xMinYMid meet"
       >
         <title>Your Privacy Choices Opt-Out Icon</title>
         <path

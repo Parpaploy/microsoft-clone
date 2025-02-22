@@ -1,4 +1,4 @@
-import { EmblaCarousel } from "../../components/caroucel";
+import { PcEmblaCarousel } from "../../components/caroucels/pc-caroucel.tsx";
 import {
   PcCardContentBottom,
   PcCardContentExplore,
@@ -193,7 +193,7 @@ export default function PcHomePage() {
         </div>
 
         <div style={{ marginBottom: `4%` }}>
-          <EmblaCarousel />
+          <PcEmblaCarousel />
         </div>
 
         <div
