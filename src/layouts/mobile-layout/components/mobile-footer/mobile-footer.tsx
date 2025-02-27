@@ -5,7 +5,7 @@ import {
 import {
   IBottomFooterProps,
   IFooterColumn,
-} from "../../../../interfaces/card.interface";
+} from "../../../../interfaces/content.interface.ts";
 import { LiaCopyright } from "react-icons/lia";
 import "./mobile-footer.css";
 

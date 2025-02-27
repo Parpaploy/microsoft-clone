@@ -1,14 +1,18 @@
-import { ICategoryMenuProps } from "../../../interfaces/content.interface";
-import "./pc-category-menu.css";
+import "./moblie-category-menu.css";
 
-export default function PcCategoryMenu(props: ICategoryMenuProps) {
+export interface ICategoryMenuProps {
+  menuIcon: string;
+  menuName: string;
+}
+
+export default function MobileCategoryMenu(props: ICategoryMenuProps) {
   return (
     <>
       <div
         style={{ padding: `0.7vw 0` }}
         className="flex flex-col justify-center items-center gap-2 category-menu"
       >
-        <div className="w-[3vw] h-auto icon-img">
+        <div className="w-[5vw] h-auto icon-img">
           <img
             className="w-full h-auto"
             src={props.menuIcon}

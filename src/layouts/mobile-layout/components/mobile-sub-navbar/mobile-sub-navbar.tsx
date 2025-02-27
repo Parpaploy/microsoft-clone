@@ -6,7 +6,7 @@ export default function MobileSubNavbar() {
     <>
       <div
         style={{ padding: `2svh 10vw` }}
-        className="w-full h-auto min-h-[7svh] bg-[#0067b8] flex justify-center items-center text-white font-medium text-center more-content"
+        className="w-full h-auto min-h-[7svh] bg-[#0067b8] flex justify-center items-center text-white font-medium text-center z-50 more-content"
       >
         Pay your way, with flexible payment options available at checkout.
         <span className="more-content-arrorw">

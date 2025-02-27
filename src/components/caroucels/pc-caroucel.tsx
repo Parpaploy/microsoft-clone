@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import { IPcEmblaCaroucelProps } from "../../interfaces/card.interface.ts";
+import { IPcEmblaCaroucelProps } from "../../interfaces/content.interface.ts";
 import { pcCaroucelImage } from "../../constants/web-content.tsx";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { HiPlay } from "react-icons/hi2";

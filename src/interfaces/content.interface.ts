@@ -35,3 +35,15 @@ export interface IBottomFooterProps {
   link: string;
   icon: ReactNode;
 }
+
+export interface IMobileEmblaCaroucelProps {
+  image: string;
+  title: string;
+  description: string;
+  btnName: string;
+}
+
+export interface ICategoryMenuProps {
+  menuIcon: string;
+  menuName: string;
+}

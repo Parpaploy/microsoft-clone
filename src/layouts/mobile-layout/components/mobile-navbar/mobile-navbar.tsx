@@ -9,7 +9,7 @@ export default function MobileNavbar() {
     <>
       <div
         style={{ padding: `0 3vw` }}
-        className="w-[100%] h-[7svh] bg-white flex justify-between items-center text-[0.9vw] font-light"
+        className="w-[100%] h-[7svh] bg-white flex justify-between items-center text-[0.9vw] z-50 font-light"
       >
         <div className="flex items-center gap-[3vw]">
           <div className="text-[3vw] mb-nav-menu">

@@ -1,10 +1,11 @@
 import {
   IBottomFooterProps,
+  ICategoryMenuProps,
   IFooterData,
+  IMobileEmblaCaroucelProps,
   IPcContentCardProps,
   IPcEmblaCaroucelProps,
-} from "../interfaces/card.interface";
-import { IPcCategoryMenuProps } from "../pages/pc-pages/components/pc-category-menu";
+} from "../interfaces/content.interface";
 import { IoEarth } from "react-icons/io5";
 
 export const leftNavbarMenu: string[] = [
@@ -46,7 +47,7 @@ export const PcCardContentTop: IPcContentCardProps[] = [
   },
 ];
 
-export const PcCategoryMenuContent: IPcCategoryMenuProps[] = [
+export const CategoryMenuContent: ICategoryMenuProps[] = [
   {
     menuIcon:
       "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Link-List-Icons-Surface-Devices?wid=40&hei=40",
@@ -364,5 +365,24 @@ export const bottomFooterData: IBottomFooterProps[] = [
     title: "About our ads",
     link: "",
     icon: null,
+  },
+];
+
+export const mobileCaroucelImageTop: IMobileEmblaCaroucelProps[] = [
+  {
+    image:
+      "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-M365-Icon-Bounce:VP2-859x540",
+    title: "Achieve the extraordinary",
+    description:
+      "Microsoft 365 delivers cloud storage, security, and Microsoft Copilot in your favorite apps—all in one plan.",
+    btnName: "Shop Microsoft 365",
+  },
+  {
+    image:
+      "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-Surface-Pro-AI-11Ed-Sapphire-MC001-3000x1682:VP2-859x540",
+    title: "Save up to $500 on select Surface Pro, Copilot+ PC",
+    description:
+      "Score savings on a fast, flexible 2-in-1 built for advanced AI experiences. For a limited time.",
+    btnName: "Shop now",
   },
 ];

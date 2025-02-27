@@ -6,7 +6,7 @@ import {
   PcCardContentTop,
   PcCategoryMenuContent,
 } from "../../constants/web-content.tsx";
-import { IPcContentCardProps } from "../../interfaces/card.interface";
+import { IPcContentCardProps } from "../../interfaces/content.interface.ts";
 import PcCategoryMenu, {
   IPcCategoryMenuProps,
 } from "./components/pc-category-menu";

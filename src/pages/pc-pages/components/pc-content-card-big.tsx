@@ -1,4 +1,4 @@
-import { IPcContentCardProps } from "../../../interfaces/card.interface";
+import { IPcContentCardProps } from "../../../interfaces/content.interface";
 import "./pc-content-card-big.css";
 
 export default function PcContentCardBig(props: IPcContentCardProps) {
